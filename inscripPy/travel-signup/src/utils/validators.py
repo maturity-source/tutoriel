@@ -9,4 +9,5 @@ def validate_password(password):
         len(password) >= 8 and
         any(char.isdigit() for char in password) and
         any(char.isalpha() for char in password)
+        and any(char in '!@#$%^&*()_+' for char in password)  # Special character check
     )
